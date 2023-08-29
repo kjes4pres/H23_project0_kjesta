@@ -6,3 +6,5 @@ First project in IN1910 about testing with pytest and git
 ## Authors
 
 - Kjersti Stangeland (kjesta@geo.uio.no)
+
+### Comments
