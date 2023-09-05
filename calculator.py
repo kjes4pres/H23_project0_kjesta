@@ -16,3 +16,12 @@ def factorial(x:float) -> float:
         counter = counter + 1
     return factorial_result
 
+
+def sin(x:float) -> float:
+    '''Calculate sin(x) using  the truncated Taylor series expansion'''
+    N = 20
+    result = 0
+    for n in range(N + 1):
+        result += (((-1)**n)*x**(2*n + 1))/factorial(2*n + 1)
+    return result
+
