@@ -30,10 +30,10 @@ def sin(x: float) -> float:
 def mean(x: list) -> float:
     '''Calculate the mean value of a list of numbers.'''
     length = len(x)
-    sum = 0
+    sum_of_list = 0  
     for i in range(length):
-        sum += x[i]
-    mean_value = sum/length
+        sum_of_list += x[i]
+    mean_value = sum_of_list/length
     return mean_value 
 
 
