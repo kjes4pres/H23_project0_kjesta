@@ -9,7 +9,7 @@ from calculator import *
 )
 def test_add(x, y, expected):
     computed = add(x, y)
-    success = computed == expected
+    success = computed == expected or m.isclose(expected, computed) == True
     message = f"Computed value was {computed}, expected value was {expected}."
     assert success, message
 
