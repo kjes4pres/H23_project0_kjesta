@@ -1,4 +1,5 @@
 import pytest 
+import math as m
 
 from calculator import *
 
@@ -22,7 +23,7 @@ def test_divide(x, y, expected):
 
 
 @pytest.mark.parametrize(
-    "x, expected", [(0,1), (2,1), (5,120)]
+    "x, expected", [(0,1), (2,2), (5,120)]
 )
 def test_factorial(x, expected):
     computed = factorial(x)
@@ -31,7 +32,7 @@ def test_factorial(x, expected):
     assert success, message
 
 
-@pytest.mark.parametrize(
-)
-def test_sin():
-    computed = sin()
+# @pytest.mark.parametrize(
+# )
+# def test_sin():
+#     computed = sin()
