@@ -1,5 +1,6 @@
 import pytest 
 import math as m
+import numpy as np
 
 from calculator import *
 
@@ -32,7 +33,11 @@ def test_factorial(x, expected):
     assert success, message
 
 
-# @pytest.mark.parametrize(
-# )
-# def test_sin():
-#     computed = sin()
+@pytest.mark.parametrize(
+        "x, expected", [(0, 0), (np.pi/4, 1/(np.sqrt(2))), (np.pi/2, 1), (3*np.pi/2, -1)]
+)
+def test_sin(x, expected):
+    computed = sin(x)
+    success = computed == expected or m.isclose(expected, computed) == True
+    message = f"Computed value was {computed}, expected value was {expected}."
+    assert success, message
