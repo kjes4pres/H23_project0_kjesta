@@ -51,3 +51,13 @@ def test_mean(list, expected):
     success = computed == expected or m.isclose(expected, computed) == True
     message = f"Computed value was {computed}, expected value was {expected}."
     assert success, message
+
+
+@pytest.mark.parametrize(
+    "list, expected", [([1,2,3], 1/3), ([1,1,1,1], 0), ([5,10], 6.25)]
+)
+def test_var(list, expected):
+    computed = var(list)
+    success = computed == expected or m.isclose(expected, computed) == True
+    message = f"Computed value was {computed}, expected value was {expected}."
+    assert success, message
