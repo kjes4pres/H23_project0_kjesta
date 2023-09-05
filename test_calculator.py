@@ -41,3 +41,13 @@ def test_sin(x, expected):
     success = computed == expected or m.isclose(expected, computed) == True
     message = f"Computed value was {computed}, expected value was {expected}."
     assert success, message
+
+
+@pytest.mark.parametrize(
+    "list, expected", [([1, 2, 3], 2), ([0.5, 0.5], 0.5), ([3, 4, 5, 8], 5)]
+)
+def test_mean(list, expected):
+    computed = mean(list)
+    success = computed == expected or m.isclose(expected, computed) == True
+    message = f"Computed value was {computed}, expected value was {expected}."
+    assert success, message
