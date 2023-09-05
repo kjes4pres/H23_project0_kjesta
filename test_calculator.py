@@ -30,3 +30,8 @@ def test_factorial(x, expected):
     message = f"Computed value was {computed}, expected value was {expected}."
     assert success, message
 
+
+@pytest.mark.parametrize(
+)
+def test_sin():
+    computed = sin()
