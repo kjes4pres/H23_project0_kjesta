@@ -19,3 +19,14 @@ def test_divide(x, y, expected):
     success = computed == expected or m.isclose(expected, computed) == True
     message = f"Computed value was {computed}, expected value was {expected}."
     assert success, message 
+
+
+@pytest.mark.parametrize(
+    "x, expected", [(0,1), (2,1), (5,120)]
+)
+def test_factorial(x, expected):
+    computed = factorial(x)
+    success = computed == expected or m.isclose(expected, computed) == True
+    message = f"Computed value was {computed}, expected value was {expected}."
+    assert success, message
+
