@@ -54,7 +54,7 @@ def test_mean(list, expected):
 
 
 @pytest.mark.parametrize(
-    "list, expected", [([1,2,3], 1/3), ([1,1,1,1], 0), ([5,10], 6.25)]
+    "list, expected", [([1,2,3], 2/3), ([1,1,1,1], 0), ([5,10], 6.25)]
 )
 def test_var(list, expected):
     computed = var(list)
