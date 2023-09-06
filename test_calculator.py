@@ -65,3 +65,7 @@ def test_var(list, expected):
 def test_factorial_raises_ValueError_for_negatives():
     with pytest.raises(ValueError):
         factorial(-1)
+
+def test_factorial_raises_TypeError_for_noninteger():
+    with pytest.raises(TypeError):
+        factorial(1/3)
