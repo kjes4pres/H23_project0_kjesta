@@ -69,3 +69,7 @@ def test_factorial_raises_ValueError_for_negatives():
 def test_factorial_raises_TypeError_for_noninteger():
     with pytest.raises(TypeError):
         factorial(1/3)
+
+def test_divide_raises_ZeroDivisionError():
+    with pytest.raises(ZeroDivisionError):
+        divide(5,0)
