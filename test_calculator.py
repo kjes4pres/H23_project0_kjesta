@@ -61,3 +61,7 @@ def test_var(list, expected):
     success = computed == expected or m.isclose(expected, computed) == True
     message = f"Computed value was {computed}, expected value was {expected}."
     assert success, message
+
+def test_factorial_raises_ValueError_for_negatives():
+    with pytest.raises(ValueError):
+        factorial(-1)
