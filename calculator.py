@@ -8,8 +8,14 @@ def divide(x: float, y: float) -> float:
     return x/y
 
 
-def factorial(x: float) -> float:
-    '''Take factorial of a number, ex.: 5! = 1*2*3*4*5 = 120.'''
+def factorial(x: int) -> float:
+    '''Take factorial of a  non-negative number, ex.: 5! = 1*2*3*4*5 = 120.
+    '''
+    try:
+        if x < 0:
+            raise ValueError("You can only take factorial of a positive number.")
+    except ValueError:
+       raise ValueError 
     counter = 1
     factorial_result = 1
     while counter <= x:
