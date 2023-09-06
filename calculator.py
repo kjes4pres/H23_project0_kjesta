@@ -9,19 +9,13 @@ def divide(x: float, y: float) -> float:
 
 
 def factorial(x: int) -> float:
-    '''Take factorial of a  non-negative integer, ex.: 5! = 1*2*3*4*5 = 120.
-    '''
-    try:
-        if x < 0:
-            raise ValueError("You can only take factorial of a positive number.")
-    except ValueError:
-       raise ValueError 
-    
-    try:
-        float == type(x)
-    except TypeError:
-        print("This function only takes the factorial of integers.")
+    '''Take factorial of a  non-negative integer, ex.: 5! = 1*2*3*4*5 = 120.'''
 
+    if x < 0:
+        raise ValueError(f"Function only takes factorial of positive numbers, not {x}.")
+    if not isinstance(x, int):
+        raise TypeError(f"Function only takes factorial of integers, not {x}.")
+    
     counter = 1
     factorial_result = 1
     while counter <= x:
