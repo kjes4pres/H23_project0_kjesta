@@ -47,3 +47,9 @@ def test_integrate_raises_ValueError_for_invalid_method():
     with pytest.raises(ValueError):
         n = 5000
         integrate(f, a, b, n, "notmidpoint")
+
+
+# @pytest.mark.parametrize(
+#     "n", [(36), (64), (128), (256)]
+# )
+# def test_rate_of_convergence(n):
