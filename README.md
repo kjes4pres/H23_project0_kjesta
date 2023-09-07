@@ -12,6 +12,6 @@ First project in IN1910 about testing with pytest and git
 
 - To answer the last question in exercise 8: I did not have to alter the original division function in calculator.py to implement the test for ZeroDivisionError. 
 
-- Did not have the time to do exercise 9, unfortunately.  
-
  - Unsure about the format of my commit messages. Would love to get some feedback on those. Too short/long, detailed enough? etc. 
+
+ - Did not have time to finish 9d.
