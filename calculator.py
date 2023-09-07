@@ -8,7 +8,7 @@ def divide(x: float, y: float) -> float:
     return x / y
 
 
-def factorial(x: int) -> float:
+def factorial(x: int) -> int:
     """Take factorial of a  non-negative integer, ex.: 5! = 1*2*3*4*5 = 120."""
 
     if x < 0:
